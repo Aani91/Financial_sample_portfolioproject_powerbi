@@ -16,39 +16,45 @@ Welcome to the Financial Sample Power BI report. This report provides insights i
     Export: You can export specific data or visualizations using the "Export" option, allowing you to save or share the information in various formats.
 
 ### Dashboards
-Profit & Loss Analysis
+   #### Profit & Loss Analysis
 
     Offers a detailed analysis of revenues, expenses, and net profit over time.
     Helps identify trends and factors affecting financial performance.
+    
+   #### Product Analysis
 
-Budget vs. Actual
+    Analyzes product performance, including sales, profit, and quantity sold.
+   Helps you understand which products contribute the most to revenue and profit.
 
-    Compares budgeted figures with actual financial data.
-    Useful for tracking financial performance against budgeted targets.
+   #### Geographic Analysis
 
-Financial Metrics
+     Offers geographic insights with maps and location-based data.
+     Allows you to explore sales and customer distribution across country.
+    
 
-    Displays key financial metrics, such as ROI, liquidity ratios, and profitability.
-    Provides insights into the financial health of the organization.
-
-Cash Flow Analysis
-
-    Analyzes cash inflows and outflows to ensure liquidity and operational sustainability.
-    Aids in making informed decisions regarding cash management.
-
-How to Use the Report
+#### How to Use the Report
 
     Utilize filters to focus on specific time periods, departments, or financial metrics.
     Click on data points or visual elements to drill down for more detailed information.
     Explore different dashboards to obtain a well-rounded view of financial performance.
 
-Additional Notes
+#### Measures Used
 
     The data in this report is based on the Financial Sample dataset and is periodically updated.
-    Feel free to contact the report administrator if you have any questions, feedback, or encounter any issues.
+    Measure were created for the project.
+    Gross Profit = SUM(financials[Gross Sales])-SUM(financials[COGS]) 
+    Gross Profit Margin = DIVIDE([Gross Profit],[Net Sales]) %
+    Net Profit = SUM(financials[ Sales])-SUM(financials[COGS])-SUM(financials[Discounts])
+    Net Profit Margin = DIVIDE([Net Profit], [Revenue]) %
+    Net Sales = SUM(financials[Gross Sales])-SUM(financials[Discounts])
+    Profit per Unit Sold = SUM(financials[Profit]) / SUM(financials[ Sales])
+    Revenue = SUM(financials[Gross Sales]) - SUM(financials[Discounts])
+    Revenue per Unit Sold = SUM(financials[ Sales]) / SUM(financials[Manufacturing Price])
 
-Conclusion
+## Conclusion
 
-We hope this Financial Sample Power BI report helps you gain a deep understanding of financial performance and aids in making informed financial decisions. Please explore the report to analyze financial trends and ensure the organization's financial health and sustainability.
+We hope this Financial Sample Power BI report helps you gain a deep understanding of financial performance and aids in making informed financial decisions. 
+Some insights from the analysis are:
+1.
 
 If you have any questions or require further assistance, please do not hesitate to reach out to the report administrator. Enjoy your data analysis and exploration!
